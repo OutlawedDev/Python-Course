@@ -1,11 +1,21 @@
-tree1 = 98 
-tree2 = 94
-tree3 = 41
-tree4 = 95
-tree5 = 11
+a = int(input("Enter a Value: "))
+b = int(input("Enter a value 2: "))
+c = int(input("Enter a value 3: "))
 
-sum =  tree1+tree2+tree3+tree4+tree5
-print("The sum of 5 trees are", sum)
+avg = (a + b + c)
+print("avg = ", avg)
 
-average = sum/5
-print("The average of the 5 trees are", average)
+if avg < a and avg < b and avg < c:
+    print("%d is higher than %d , %d, %d" %(avg, a, b, c))
+elif avg > a and avg > b:
+    print("%d is higher than %d, %d, %d " %(avg, a, b, c))
+elif avg > a and avg > c:
+    print("%d is higher than %d, %d, %d " %(avg, a , c))
+elif avg > b and avg > c:
+    print("%d is higher than %d, %d, %d " %(avg, b , c))
+elif avg > a :
+    print("%d is just higher than %d " %(avg, a))
+elif avg  > b:
+    print("%d is just higher than %d " %(avg, b))
+elif avg > c :
+    print("%d is just higher than %d " %(avg, c))
