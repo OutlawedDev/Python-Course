@@ -9,3 +9,12 @@ except ZeroDivisionError:
 
 except SyntaxError:
     print("Comma is missing, Enter numbers seperated by comma like this 1, 2")
+
+except:
+    print("Wrong Input")
+
+else:
+    print("No Exceptions")
+
+finally:
+    print("This will execute no matter what")
