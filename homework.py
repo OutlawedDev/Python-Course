@@ -1,7 +1,8 @@
-temperature = int(input("Enter the temperature: "))
-if temperature > 25:
-    print("It's a hot day")
+tuplex = (1,2,3,4,5)
 
-speed = int(input("Enter your speed: "))
-if speed > 50:
-    print("You are speeding")
+product = 1
+
+for num in tuplex:
+    product += num
+
+print("the product of the numbers in tuplex is", product)
