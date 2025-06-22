@@ -1,7 +1,14 @@
-def weather():
-    print("The weather is good right now", spring)
-    print("The weather is same in", autumn)
+weather = (1,0,0,0,1,1,0)
+sunny = 0
+rainy = 0
+for i in range(0,7):
+    if(weather[i]==0):
+        rainy += 1
+    else:
+        sunny +=1
 
-spring = "autumn"
-autumn = spring
-weather()
+
+if(sunny > rainy):
+    print("the weather is good")
+else:
+    print("the weather is bad")
