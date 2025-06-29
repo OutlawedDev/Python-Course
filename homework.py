@@ -1,8 +1,8 @@
-tuplex = (1,2,3,4,5)
+a = {1, 2, 3, 4, 5}
+b = {4, 5, 6, 7, 8}
 
-product = 1
+print("Set a:", a)
+print("set b:", b)
 
-for num in tuplex:
-    product += num
-
-print("the product of the numbers in tuplex is", product)
+symmetric_diff_set = a.symmetric_difference(b)
+print("Symmetric difference (A and B):", symmetric_diff_set)
