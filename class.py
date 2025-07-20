@@ -1,5 +1,18 @@
-class student:
-    grade = 6
-    print("Hi i am a student of grade", grade)
+class employee:
 
-ob = student()
+    def __init__(self):
+        print("employee created")
+    
+    def __del__(self):
+        print("destructor called")
+
+
+def create_obj():
+    print("creating object")
+    obj = employee()
+    print("object created")
+    return obj
+
+print("calling create_onj() function")
+obj = create_obj()
+print("end")
