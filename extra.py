@@ -1,47 +1,18 @@
-class InsufficeentFunds(Exception):
-    """Custom Exception for insufficient balance"""
-    pass
+class rectangle:
 
-class BankAccount:
-    def __init__(self, owner, balance):
-        self.owner = owner
-        self.balance = balance
-
-    def withdraw (self, amount):
-        try:
-            print(f"\nAttempting to withdraw ${amount} from {self.owner}'s account")
-
-            if not isinstance(amount, (int, float)):
-                    raise TypeError("Amount must be a number")
-                
-            if amount <= 0:
-                    raise ValueError("Amount must be a positive number")
-                
-            if amount > self.balance:
-                    raise InsufficeentFunds("Insufficient Balance in your account")
-                
-            self.balance -= amount
-            print(f"Withdrawal Successful. New balance is ${self.balance}")
-
-        except TypeError as te:
-                print("Type Error:", te)
-
-        except ValueError as ve:
-                print("Value Error:", ve)
-            
-        except InsufficeentFunds as ie:
-                print("Insufficient Funds:", ie)
-            
-        except Exception as e:
-                print("An error occured: ", e)
-            
-        finally:
-                print("Transaction Attempt Complete")
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+    
+    def area(self):
+        return self.width * self.height
+    def perimeter(self):
+        return 2 * (self.width + self.height)
 
 
-account = BankAccount("Amit", 5000)
+w = int(input("Enter width of rectangle: "))
+h = int(input("Enter height of rectangle: "))
 
-account.withdraw(1500)
-account.withdraw("two")
-account.withdraw(-200)
-account.withdraw(10000)
+obj = rectangle(w, h)
+print("area of rectangle is", obj.area)
+print("perimeter of rectangle is", obj.perimeter)
