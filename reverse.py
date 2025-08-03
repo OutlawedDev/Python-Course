@@ -1,9 +1,13 @@
-string = input("Enter your string to be reversed")
+class reverse:
+    def __init__(self, sentence):
+        self.sentence = sentence
+    
+    def reverse_sentence(self):
+        words = self.sentence.split()
+        reversed_words = words[::-1]
+        return ' '.join(reversed_words)
 
-string2 = ('')
+sentence = input("Enter a sentence to reverse:")
 
-for i in string:
-    string2 = i + string2
-
-print("The original string", string)
-print("The reversed string is", string2)
+s = reverse(sentence)
+print(s.reverse_sentence())
