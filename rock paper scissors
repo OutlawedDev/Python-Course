@@ -1,0 +1,33 @@
+import random
+
+print("Rock Paper Scissors Game")
+
+choices = ["rock", "paper", "scissors"]
+
+while True:
+    user = input("Choose rock, paper, or scissors (or type quit): ").lower()
+
+    if user == "quit":
+        print("Thanks for playing!")
+        break
+
+    if user not in choices:
+        print("Invalid choice, try again.")
+        continue
+
+    robot = random.choice(choices)
+
+    print("Robot chose:", robot)
+
+    if user == robot:
+        print("It's a tie!")
+    elif user == "rock" and robot == "scissors":
+        print("You win!")
+    elif user == "paper" and robot == "rock":
+        print("You win!")
+    elif user == "scissors" and robot == "paper":
+        print("You win!")
+    else:
+        print("Robot wins!")
+
+    print()
